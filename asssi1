@@ -1,0 +1,121 @@
+Q1. Create one variable containing a string, list, float, and tuple:
+
+You can bundle different types of data into a single variable using a tuple. Here's an example:
+
+
+mixed_data = ("Hello", [1, 2, 3], 3.14, (4, 5))
+
+
+In this example, `mixed_data` contains a string ("Hello"), a list ([1, 2, 3]), a float (3.14), and a tuple ((4, 5)).
+
+Q2. Data types of given variables:
+
+1. `var1 = ' '` : This is a string.
+2. `var2 = '[ DS , ML , Python]'` : This is also a string, despite looking like a list.
+3. `var3 = ['DS', 'ML', 'Python']` : This one is a list.
+4. `var4 = 1.0` : This is a float.
+
+ Q3. Explanation of some operators with examples:
+
+(i) `/` (Division Operator)
+This operator divides one number by another and gives the result as a float. For example:
+
+
+result = 10 / 3
+print(result)  # Output: 3.3333333333333335
+
+
+(ii) `%` (Modulus Operator)
+This gives you the remainder after dividing one number by another. For instance:
+
+python
+remainder = 10 % 3
+print(remainder)  # Output: 1
+
+
+(iii) `//` (Floor Division Operator)
+This divides one number by another, but instead of giving a float, it rounds down to the nearest whole number. For example:
+
+python
+floor_result = 10 // 3
+print(floor_result)  # Output: 3
+
+
+(iv)(Exponentiation Operator)
+This operator raises a number to the power of another. For instance:
+
+
+power = 2 ** 3
+print(power)  # Output: 8
+
+
+Q4. List of mixed data types and their types:
+
+Let's create a list with different types of data and then print each item with its type:
+
+
+my_list = [42, 'Python', 3.14, True, None, [1, 2, 3], (4, 5), {'key': 'value'}, {9, 8, 7}, b'bytes']
+
+for element in my_list:
+    print(f'Element: {element}, Data type: {type(element)}')
+
+
+Q5. Check if a number is divisible by another using a while loop:
+
+Here's how you can check if one number (A) is purely divisible by another (B) and count how many times it divides:
+
+
+A = 100
+B = 5
+count = 0
+
+while A % B == 0:
+    A = A // B
+    count += 1
+
+if count > 0:
+    print(f'A is divisible by B {count} times.')
+else:
+    print('A is not divisible by B.')
+
+
+Q6. Check if elements in a list are divisible by 3:
+
+Create a list of 25 integers and use a loop to check if each one is divisible by 3:
+
+
+int_list = list(range(1, 26))
+
+for number in int_list:
+    if number % 3 == 0:
+        print(f'{number} is divisible by 3')
+    else:
+        print(f'{number} is not divisible by 3')
+
+
+ Q7. Mutable vs Immutable Data Types:
+
+Mutable Data Types:These can be changed after they're created. Examples include lists, dictionaries, and sets.
+
+Example of mutable data type:
+
+my_list = [1, 2, 3]
+my_list[0] = 4  # Changing the first element
+print(my_list)  # Output: [4, 2, 3]
+```
+
+Immutable Data Types:These cannot be changed once they're created. Examples include strings, tuples, and numbers.
+
+Example of immutable data type:
+`
+my_string = "Hello"
+try:
+    my_string[0] = 'h'  # Trying to change the first character
+except TypeError as e:
+    print(e)  # Output: 'str' object does not support item assignment
+
+my_tuple = (1, 2, 3)
+try:
+    my_tuple[0] = 4  # Trying to change the first element
+except TypeError as e:
+    print(e)  # Output: 'tuple' object does not support item assignment
